@@ -1,6 +1,7 @@
+<body>
 <script>
 ///////////////////////
-export function pusher(temp,tag,height){
+function pusher(temp,tag,height){
   tag =tag||'div'
   height=height||'10rem'
   var el=document.createElement(tag)
@@ -9,7 +10,7 @@ export function pusher(temp,tag,height){
   document.body.append(el)
   return el;
 }
-export function debounce(func, timeout){
+ function debounce(func, timeout){
   let timer;
   // 引数に受け取った関数 func を拡張して返す
   return function (...args) {
@@ -22,7 +23,7 @@ export function debounce(func, timeout){
 }
 ////////////////////////
 
-export function gta(temp){
+ function gta(temp){
   temp=temp.trim().replace(';','')
   var html='',css='',cssgta='',gtatag="gta"
   var dic={}
@@ -161,3 +162,4 @@ input.oninput = debounce(()=>{
   demo.innerHTML = html
 },300)
 </script>
+</body>
